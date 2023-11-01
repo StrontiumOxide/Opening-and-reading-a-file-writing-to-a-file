@@ -31,7 +31,7 @@ cook_book = {
 
     # Список из блюд, которые мы хотим приготовить.
 list_diches = [
-              "Омлет", "Утка по-пекински",
+              "Омлет", "Утка по-пекински", "Утка по-пекински"
               "Запеченный картофель", "Яичница с сыром, ветчиной и помидорами"
               ]
 person_count = 4  # Количество людей
@@ -59,7 +59,7 @@ with open(file="dishes.txt", mode="a", encoding="utf-8") as file:
         text = f'{dish}\n{len(cook_book[dish])}\n'
         for ing in cook_book[dish]:
             text += f'{ing["ingredient_name"]} | {ing["quantity"]} | {ing["measure"]}\n'
-
+            
         file.write(f'{text}\n')
 
 
